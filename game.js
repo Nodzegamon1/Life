@@ -1,15 +1,13 @@
 const Grid = require('./grid');
 
-console.dir(new Grid(36));
-
-
-class Game{
-    constructor(gridsize){
-        this.grid= new this.grid(gridSize,true);
+class Game {
+    constructor(gridSize) {
+        this.grid = new Grid(gridSize, true);
     }
-    play(){
+
+    play() {
         return this.grid.compute().render();
     }
 }
 
-module.exports=Game;
+module.exports = Game;

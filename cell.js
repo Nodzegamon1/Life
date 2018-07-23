@@ -1,30 +1,29 @@
-class Cell{
-    constructor(row,col, alive=false){
-        this._row=row;
-        this._col=col;
-        this._alive=alive;
+class Cell {
+    constructor(row, col, alive = false) {
+        this._row = row;
+        this._col = col;
+        this._alive = alive;
     }
 
-    get row(){
+    get row() {
         return this._row;
     }
 
-    get col(){
+    get col() {
         return this._col;
     }
 
-    get isAlive(){
+    get isAlive() {
         return this._alive;
     }
 
-    die(){
-        this._alive=false;
+    die() {
+        this._alive = false;
     }
-    live(){
-        this._alive=true;
+
+    live() {
+        this._alive = true;
     }
 }
-
-
 
 module.exports = Cell;

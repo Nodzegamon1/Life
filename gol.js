@@ -1,18 +1,16 @@
-//
+const readline = require('readline');
 
-const readline = require ('readline');// модуль node.js для взаимодейтсвия с команб строкой
-const Game = require('.//game');
-const [,, size=36, speed=1000 ]= process.argv; // размер сетки и скорость обновления
+const Game = require('./game');
 
-const game= new Game(size);
-//запускаем игру
+const [ ,, size = 36, speed = 1000 ] = process.argv;
 
-setInterval( () => {
+const game = new Game(size);
 
-    let output=game.play();
+setInterval(() => {
+    let output = game.play();
 
-    readline.cursorTo(process.stdout,0,0);
+    readline.cursorTo(process.stdout, 0, 0);
     readline.clearScreenDown(process.stdout);
-
+    
     process.stdout.write(output);
 }, speed);
